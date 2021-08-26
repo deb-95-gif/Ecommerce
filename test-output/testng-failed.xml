@@ -6,7 +6,7 @@
       <class name="com.qa.ecommerce.tests.OrderPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="validateChangeinQuantityMessage"/>
+          <include name="validateTotalChange"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.qa.ecommerce.tests.OrderPageTest -->

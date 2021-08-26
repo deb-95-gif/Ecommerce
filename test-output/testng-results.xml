@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52842" started-at="2021-08-24T13:34:11 IST" finished-at="2021-08-24T13:35:03 IST">
+  <suite name="Default suite" duration-ms="31817" started-at="2021-08-26T12:02:39 IST" finished-at="2021-08-26T12:03:11 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52842" started-at="2021-08-24T13:34:11 IST" finished-at="2021-08-24T13:35:03 IST">
+    <test name="Default test" duration-ms="31817" started-at="2021-08-26T12:02:39 IST" finished-at="2021-08-26T12:03:11 IST">
       <class name="com.qa.ecommerce.tests.OrderPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="setUp" is-config="true" duration-ms="24843" started-at="2021-08-24T13:34:11 IST" finished-at="2021-08-24T13:34:36 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="setUp" is-config="true" duration-ms="30604" started-at="2021-08-26T12:02:39 IST" finished-at="2021-08-26T12:03:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateChangeinQuantityMessage()[pri:2, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="validateChangeinQuantityMessage" duration-ms="495" started-at="2021-08-24T13:34:36 IST" finished-at="2021-08-24T13:34:36 IST">
+        <test-method status="PASS" signature="validatePageHeading()[pri:8, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="validatePageHeading" duration-ms="122" started-at="2021-08-26T12:03:10 IST" finished-at="2021-08-26T12:03:10 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateChangeinQuantityMessage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="tearDown" is-config="true" duration-ms="913" started-at="2021-08-24T13:34:36 IST" finished-at="2021-08-24T13:34:37 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="setUp" is-config="true" duration-ms="25157" started-at="2021-08-24T13:34:37 IST" finished-at="2021-08-24T13:35:02 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateChangeinQuantityMessagesb()[pri:3, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="validateChangeinQuantityMessagesb" duration-ms="370" started-at="2021-08-24T13:35:02 IST" finished-at="2021-08-24T13:35:02 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateChangeinQuantityMessagesb -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="tearDown" is-config="true" duration-ms="962" started-at="2021-08-24T13:35:02 IST" finished-at="2021-08-24T13:35:03 IST">
+        </test-method> <!-- validatePageHeading -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.ecommerce.tests.OrderPageTest@5faeada1]" name="tearDown" is-config="true" duration-ms="999" started-at="2021-08-26T12:03:10 IST" finished-at="2021-08-26T12:03:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
