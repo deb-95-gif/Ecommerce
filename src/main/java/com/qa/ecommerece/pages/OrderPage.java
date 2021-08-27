@@ -8,7 +8,7 @@ import com.qa.ecommerce.base.TestBase;
 
 public class OrderPage extends TestBase {
 	
-	HomePage home;
+	HomePage home = new HomePage();
 	
 	//Web Element Locators
 	@FindBy(xpath = "//td[@class='cart_product']//img[@alt='Faded Short Sleeve T-shirts']")
@@ -41,7 +41,7 @@ public class OrderPage extends TestBase {
 	@FindBy(xpath = "//h1[@class='page-heading']")
 	WebElement heading;
 	
-	@FindBy(xpath = "//span[contains(text(),'DEBANJAN BHOWMICK')]")
+	@FindBy(xpath = "//span[contains(text(),' ')]")
 	WebElement cstName;
 	
 	@FindBy(css = ".button.btn.btn-default.standard-checkout.button-medium")
@@ -97,14 +97,15 @@ public class OrderPage extends TestBase {
 		return pageHeading;
 	}
 	
-	public void clickOnCheckOut() {
+	public OrderAddress clickOnCheckOut() {
 		prcCheckBtn.click();
-		if(cstName.getText().matches(" ")) {
+		//if(cstName.getText().matches(" ")) 
 			home.login(prop.getProperty("username"), prop.getProperty("password"));
-		}
-		else (cstName.getText().matches("DEBANJAN")){
-			
-		}
+			return new OrderAddress();
+		
+//		else(cstName.getText().matches("DEBANJAN")) {
+//			return new OrderAddress();
+//		}
 	}
 
 }

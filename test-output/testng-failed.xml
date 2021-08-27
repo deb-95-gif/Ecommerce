@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.ecommerce.tests.OrderPageTest">
+      <class name="com.qa.ecommerce.tests.OrderAddressTest">
         <methods>
+          <include name="validateBillingAddress"/>
           <include name="tearDown"/>
-          <include name="validateTotalChange"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.qa.ecommerce.tests.OrderPageTest -->
+      </class> <!-- com.qa.ecommerce.tests.OrderAddressTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
