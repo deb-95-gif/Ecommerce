@@ -8,7 +8,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
+import com.beust.jcommander.Parameter;
 import com.qa.ecommerce.utils.TestUtil;
 
 public class TestBase {
@@ -30,10 +35,21 @@ public class TestBase {
 			}
 	}
 	
-	public static void intialization() throws IOException {
+	
+	@Parameter
+	public static void intialization(String name) throws IOException {
+		
+		
+		if(name .equalsIgnoreCase("chrome")) {
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Debanjan/SeleniumConcepts/ECommerce/src/resources/Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
-		
+		} else if(name.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "C:/Users/Debanjan/SeleniumConcepts/ECommerce/src/resources/Drivers/geckodriver.exe");
+			driver = new FirefoxDriver();
+		} else if (name.equalsIgnoreCase("Edge")) {
+			System.setProperty("webdriver.edge.driver", "C:/Users/Debanjan/SeleniumConcepts/ECommerce/src/resources/Drivers/msedgedriver.exe");
+			driver = new EdgeDriver();
+		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		

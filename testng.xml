@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+    <test name="WIN10TEST">
+  <parameter name="browser" value="chrome"/> 
+ 
+    <classes>
+      <class name="com.qa.ecommerce.tests.eveningDressPageTest"/>
+    </classes>
   </test> <!-- Test -->
+  
+  <test name="WIN10TEST2">
+  <parameter name="browser" value="firefox"/>
+ 
+    <classes>
+      <class name="com.qa.ecommerce.tests.eveningDressPageTest"/>
+    </classes>
+    </test>
 </suite> <!-- Suite -->

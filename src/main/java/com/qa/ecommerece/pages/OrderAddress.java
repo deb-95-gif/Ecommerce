@@ -35,6 +35,18 @@ public class OrderAddress extends TestBase {
 	@FindBy(css = "ul[class='address alternate_item box'] li[class='address_phone_mobile']")
 	WebElement mbNum;
 	
+	@FindBy(xpath = "//input[@id='addressesAreEquals']")
+	WebElement addressChkbox;
+	
+	@FindBy(xpath = "//div[@id='address_invoice_form']//span[contains(text(),'Add a new address')]")
+	WebElement addNewAddbtn;
+	
+	@FindBy(xpath = "//textarea[@name='message']")
+	WebElement addComment;
+	
+	@FindBy(xpath = "//button[@name='processAddress']")
+	WebElement prcdCheckOut;
+	
 	public OrderAddress() {
 		PageFactory.initElements(driver, this);
 	}
@@ -53,5 +65,21 @@ public class OrderAddress extends TestBase {
 		String phn = phnNum.getText();
 		String Mn = mbNum.getText();
 		return name+empStaus+houseAdd+country+phn+Mn;
+	}
+	
+	public boolean isaddNewaddRessBtnEnabled() {
+		boolean flag = false;
+		if(addressChkbox.isSelected()== true) {
+			 flag  = addNewAddbtn.isDisplayed();
+	}
+			return flag;
+		//return flag;
+		
+	}
+	
+	public OrderShippingPage addNewComment(String cmnt) {
+		addComment.sendKeys(cmnt);
+		prcdCheckOut.click();
+		return new OrderShippingPage();
 	}
 }

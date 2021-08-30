@@ -46,7 +46,6 @@ public class OrderHistoryPageTest extends TestBase {
 		Assert.assertEquals(text, "You have not placed any orders.");
 	}
 	
-	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();

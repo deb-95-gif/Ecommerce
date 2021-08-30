@@ -39,6 +39,12 @@ public class SignINPage extends TestBase {
 	@FindBy(xpath = "//span[normalize-space()='Check out']")
 	WebElement checkOut;
 	
+	@FindBy(xpath = "//body/div/div/header/div/div/div/div/ul/li[2]/ul[1]/li[2]/a[1]")
+	WebElement eveningDress;
+	
+	@FindBy(css = "body > div:nth-child(1) > div:nth-child(1) > header:nth-child(1) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(6) > ul:nth-child(2) > li:nth-child(2) > a:nth-child(1)")
+	WebElement Dress;
+	
 	Actions action = new Actions(driver);
 	
 	public SignINPage() {
@@ -72,6 +78,13 @@ public class SignINPage extends TestBase {
 //				 System.out.println("AlertMessage verified");
 //			 }
 		 }
+	
+	public eveningDressPage clickonDresses() throws InterruptedException {
+		action.moveToElement(Dress).build().perform();
+		Thread.sleep(2000);
+		eveningDress.click();
+		return new eveningDressPage();
+	}
 //	
 //		public OrderPage ProductcheckOut() {
 //			if(viewShoppingCart.isDisplayed()== true) {
