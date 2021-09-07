@@ -6,10 +6,15 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.qa.ecommerce.base.TestBase;
@@ -27,9 +32,9 @@ public class eveningDressPageTest extends TestBase {
 		super();
 	}
 	
-	@BeforeMethod
+   @BeforeMethod
 	public void setUp() throws InterruptedException, IOException {
-		intialization(" ");
+		intialization();
 		util = new TestUtil();
 		signIn = new SignINPage();
 		evening = signIn.clickonDresses();
@@ -59,12 +64,12 @@ public class eveningDressPageTest extends TestBase {
 //		Assert.assertEquals(flag, true);
 //	}
 	
-	@Test(priority = 5)
-	public void checktherestOfCheckboxes() throws IOException {
-		boolean flag = evening.checktheCheckboxes();
-		Assert.assertEquals(flag, true);
-		util.takeScreenshot("checkBoxes");
-	}
+//	@Test(priority = 5)
+//	public void checktherestOfCheckboxes() throws IOException {
+//		boolean flag = evening.checktheCheckboxes();
+//		Assert.assertEquals(flag, true);
+//		util.takeScreenshot("checkBoxes"); // take screenshot at the end of the test
+//	}
 //	
 //	@Test(priority = 6)
 //	public void verifyThetxt() {
@@ -79,14 +84,32 @@ public class eveningDressPageTest extends TestBase {
 //				" Our stores",text);
 //	}
 	
+//	@Test(priority = 7)
+//	public void verifyTheDropdownSelection() {
+//		boolean flag = evening.dropdown();
+//		Assert.assertEquals(flag, true);
+//	}
+//	
+//	@Test(priority = 8)
+//	public void verifyCheckTheCheckBoxes() {
+//	boolean flag = evening.checktheCheckboxes();
+//	Assert.assertEquals(flag,true);
+//	}
+	
+//	@Test(priority = 9)
+//	public void verifyTheLogo() {
+//		boolean flag = evening.verifyLogo();
+//		Assert.assertEquals(flag, true);
+//	}
+	
+	@Test(priority = 10)
+	public void verifythesearchresult() {
+		String text = evening.typeonsearchbar();
+		Assert.assertEquals(text, "Summer Dresses > Printed Chiffon Dress");
+	}
+	
 	@AfterMethod
 	 public void tearDown() {
-//    {
-//        TakesScreenshot scr= ((TakesScreenshot)driver);
-//        File file1= scr.getScreenshotAs(OutputType.FILE);
-//        File DestFile=new File("C:/Users/Debanjan/SeleniumConcepts/ECommerece/test-output");
-//        FileUtils.copyFile(file1, DestFile);
-//        System.out.println("Screenshot of the test is taken");
 	 		driver.quit();
     }
 	

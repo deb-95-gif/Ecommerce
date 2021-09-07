@@ -1,16 +1,29 @@
 package com.qa.ecommerece.pages;
 
+
+import java.util.List;
+import java.sql.Driver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.qa.ecommerce.base.TestBase;
 
 public class eveningDressPage extends TestBase {
 
+	
+	//WebDriver driver = new ChromeDriver();
+	
 	//web element locators
 	@FindBy(xpath = "//body/div/div/div/div/div/div/div/ul/li[3]")
-	WebElement list;
+	WebElement list1;
 	
 	@FindBy(xpath = "//p[@class='product-desc']")
 	WebElement prdDesc;
@@ -74,8 +87,38 @@ public class eveningDressPage extends TestBase {
 	@FindBy(xpath = "//div[@class='block_content list-block']//a[@title='Our stores'][normalize-space()='Our stores']")
 	WebElement Ourstore;
 	
+	@FindBy(xpath = "//select[@class='selectProductSort form-control']")
+	WebElement dropDownoption;
+	
+	@FindBy(xpath = "//img[@alt='My Store']")
+	WebElement logo;
+	
+//	@FindBy(xpath = "//input[@placeholder='Search']")
+//	WebElement searchplaceholder;
+	
+	@FindBy(xpath = "//input[@placeholder='Search']")
+	WebElement searchquery;
 	
 	
+	//Create dynamic Xpath for size
+	
+	public String typeonsearchbar() {
+		
+		String getText = " ";
+		searchquery.sendKeys("dress");
+		List<WebElement> list = searchquery.findElements(By.xpath("//li[1][@class='ac_results']//ul[@class='ac_results']/descendant::div[@class='ac_results']"));
+		System.out.println("total number of suggestions in the searchBox" +list.size());
+		for(int i = 0 ; i<list.size(); i++) {
+			System.out.println(list.get(i).getText());
+			if(list.get(i).getText().contains(" Summer Dresses > Printed Chiffon ")) {
+			getText = list.get(i).getText();
+//			list.get(i).click();
+			break;
+			}
+		}
+		return getText;
+	}
+		
 	public eveningDressPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -86,7 +129,7 @@ public class eveningDressPage extends TestBase {
 	}
 	
 	public String listView() {
-		list.click();
+		list1.click();
 		String desc = prdDesc.getText();
 		return desc;
 	}
@@ -98,7 +141,7 @@ public class eveningDressPage extends TestBase {
 		} 
 		if(size2.isDisplayed()== true) {
 			size2.click();
-		}if(size3.isDisplayed()==true) {
+		}if(size3.isDisplayed() == true) {
 			size3.click();
 		}
 		
@@ -106,9 +149,9 @@ public class eveningDressPage extends TestBase {
 	}
 	
 	public boolean checktheColor() {
-		if(beige.isDisplayed()==true) {
+		if(beige.isDisplayed() == true) {
 			beige.click();
-		} if(Pink.isDisplayed()==true) {
+		} if(Pink.isDisplayed() == true) {
 			Pink.click();
 		}
 		return true;
@@ -150,5 +193,15 @@ public class eveningDressPage extends TestBase {
 		text6 + "\r\n" +
 		text7 ; 
 	}
+	public boolean  dropdown() {
+		Select dropdown = new Select(dropDownoption);
+		dropdown.selectByVisibleText("Price: Highest first");
+		boolean flag = dropDownoption.isEnabled();
+		return flag;
+	}
 
-}
+	public boolean verifyLogo() {
+		boolean flag = logo.isDisplayed();
+		return flag;
+	}
+} 

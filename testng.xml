@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-    <test name="WIN10TEST">
-  <parameter name="browser" value="chrome"/> 
- 
+<suite name="Suite"  thread-count="2" parallel="tests">
+   <test name = "ChromeTest">
+   <parameter name = "browser" value = "Chrome"/>
     <classes>
-      <class name="com.qa.ecommerce.tests.eveningDressPageTest"/>
+      <class name="com.qa.ecommerce.tests.eveningDressPageTest">
+      </class>
     </classes>
   </test> <!-- Test -->
-  
-  <test name="WIN10TEST2">
-  <parameter name="browser" value="firefox"/>
- 
+   <test name = "fireFoxTest">
+   <parameter name = "browser" value = "firefox"/>
     <classes>
-      <class name="com.qa.ecommerce.tests.eveningDressPageTest"/>
+      <class name="com.qa.ecommerce.tests.eveningDressPageTest">
+    </class>
     </classes>
-    </test>
+  </test>
 </suite> <!-- Suite -->

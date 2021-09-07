@@ -35,21 +35,11 @@ public class TestBase {
 			}
 	}
 	
-	
-	@Parameter
-	public static void intialization(String name) throws IOException {
-		
-		
-		if(name .equalsIgnoreCase("chrome")) {
+public static void intialization() throws IOException {
+
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Debanjan/SeleniumConcepts/ECommerce/src/resources/Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
-		} else if(name.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:/Users/Debanjan/SeleniumConcepts/ECommerce/src/resources/Drivers/geckodriver.exe");
-			driver = new FirefoxDriver();
-		} else if (name.equalsIgnoreCase("Edge")) {
-			System.setProperty("webdriver.edge.driver", "C:/Users/Debanjan/SeleniumConcepts/ECommerce/src/resources/Drivers/msedgedriver.exe");
-			driver = new EdgeDriver();
-		}
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		

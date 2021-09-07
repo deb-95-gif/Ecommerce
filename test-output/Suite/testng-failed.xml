@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="WIN10TEST(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.qa.ecommerce.tests.eveningDressPageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="checktherestOfCheckboxes"/>
-        </methods>
-      </class> <!-- com.qa.ecommerce.tests.eveningDressPageTest -->
-    </classes>
-  </test> <!-- WIN10TEST(failed) -->
-  <test thread-count="5" name="WIN10TEST2(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="2" name="fireFoxTest(failed)" parallel="tests">
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="com.qa.ecommerce.tests.eveningDressPageTest">
@@ -24,5 +12,5 @@
         </methods>
       </class> <!-- com.qa.ecommerce.tests.eveningDressPageTest -->
     </classes>
-  </test> <!-- WIN10TEST2(failed) -->
+  </test> <!-- fireFoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

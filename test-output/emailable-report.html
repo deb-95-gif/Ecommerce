@@ -8,35 +8,47 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">WIN10TEST</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">103</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">WIN10TEST2</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">26</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num attn">2</th><th class="num">0</th><th class="num">0</th><th class="num">129</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">70,394</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">WIN10TEST &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.qa.ecommerce.tests.eveningDressPageTest</td><td><a href="#m0">setUp</a></td><td rowspan="1">1630344257936</td><td rowspan="1">7</td></tr><tr><th colspan="4">WIN10TEST &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.qa.ecommerce.tests.eveningDressPageTest</td><td><a href="#m1">tearDown</a></td><td rowspan="1">1630344257963</td><td rowspan="1">-1630344257963</td></tr><tr><th colspan="4">WIN10TEST &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.qa.ecommerce.tests.eveningDressPageTest</td><td><a href="#m2">checktherestOfCheckboxes</a></td><td rowspan="1">1630344257954</td><td rowspan="1">0</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">WIN10TEST2 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.qa.ecommerce.tests.eveningDressPageTest</td><td><a href="#m3">setUp</a></td><td rowspan="1">1630344258038</td><td rowspan="1">0</td></tr><tr><th colspan="4">WIN10TEST2 &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.qa.ecommerce.tests.eveningDressPageTest</td><td><a href="#m4">tearDown</a></td><td rowspan="1">1630344258058</td><td rowspan="1">-1630344258058</td></tr><tr><th colspan="4">WIN10TEST2 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.qa.ecommerce.tests.eveningDressPageTest</td><td><a href="#m5">checktherestOfCheckboxes</a></td><td rowspan="1">1630344258045</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qa.ecommerce.tests.eveningDressPageTest</td><td><a href="#m0">verifythesearchresult</a></td><td rowspan="1">1630986506960</td><td rowspan="1">40250</td></tr></tbody>
 </table>
-<h2>WIN10TEST</h2><h3 id="m0">com.qa.ecommerce.tests.eveningDressPageTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.qa.ecommerce.base.TestBase.intialization(TestBase.java:53)
-	at com.qa.ecommerce.tests.eveningDressPageTest.setUp(eveningDressPageTest.java:32)
+<h2>Default test</h2><h3 id="m0">com.qa.ecommerce.tests.eveningDressPageTest#verifythesearchresult</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Summer Dresses &gt; Printed Chiffon Dress] but found [ ]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.qa.ecommerce.tests.eveningDressPageTest.verifythesearchresult(eveningDressPageTest.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qa.ecommerce.tests.eveningDressPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.qa.ecommerce.tests.eveningDressPageTest#checktherestOfCheckboxes</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.qa.ecommerce.base.TestBase.intialization(TestBase.java:53)
-	at com.qa.ecommerce.tests.eveningDressPageTest.setUp(eveningDressPageTest.java:32)
-	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>WIN10TEST2</h2><h3 id="m3">com.qa.ecommerce.tests.eveningDressPageTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.qa.ecommerce.base.TestBase.intialization(TestBase.java:53)
-	at com.qa.ecommerce.tests.eveningDressPageTest.setUp(eveningDressPageTest.java:32)
-	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.qa.ecommerce.tests.eveningDressPageTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.qa.ecommerce.tests.eveningDressPageTest#checktherestOfCheckboxes</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at com.qa.ecommerce.base.TestBase.intialization(TestBase.java:53)
-	at com.qa.ecommerce.tests.eveningDressPageTest.setUp(eveningDressPageTest.java:32)
-	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
