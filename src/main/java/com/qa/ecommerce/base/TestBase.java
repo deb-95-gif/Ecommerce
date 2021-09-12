@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Parameters;
@@ -38,7 +39,14 @@ public class TestBase {
 public static void intialization() throws IOException {
 
 		System.setProperty("webdriver.chrome.driver", "C:/Users/Debanjan/SeleniumConcepts/ECommerce/src/resources/Drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+		
+		
+//		//using Headless Browser Execution
+//		ChromeOptions options = new ChromeOptions();
+//		options.addArguments("windows-size=1400,800");
+//		options.addArguments("headless");
+		
+		 driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

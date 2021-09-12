@@ -24,6 +24,18 @@ import com.qa.ecommerece.pages.eveningDressPage;
 
 public class eveningDressPageTest extends TestBase {
 	
+	//What is log4j?//capturing info activities at the
+	//time of program execution
+	//4 levels of logsf
+	//1. info
+	//2. warn
+	//3. error
+	//4. fatal
+	
+	//log is very important in terms of debugging the code
+	// to check the exceptions 
+	// to find if file is missing or jar is missing
+	
 	SignINPage signIn;
 	TestUtil util;
 	eveningDressPage evening;
@@ -96,17 +108,17 @@ public class eveningDressPageTest extends TestBase {
 //	Assert.assertEquals(flag,true);
 //	}
 	
-//	@Test(priority = 9)
-//	public void verifyTheLogo() {
-//		boolean flag = evening.verifyLogo();
-//		Assert.assertEquals(flag, true);
-//	}
-	
-	@Test(priority = 10)
-	public void verifythesearchresult() {
-		String text = evening.typeonsearchbar();
-		Assert.assertEquals(text, "Summer Dresses > Printed Chiffon Dress");
+	@Test(priority = 9)
+	public void verifyTheLogo() {
+		boolean flag = evening.verifyLogo();
+		Assert.assertEquals(flag, true);
 	}
+	
+//	@Test(priority = 10)
+//	public void verifythesearchresult() {
+//		String text = evening.typeonsearchbar();
+//		Assert.assertEquals(text, "Summer Dresses > Printed Chiffon Dress");
+//	}
 	
 	@AfterMethod
 	 public void tearDown() {

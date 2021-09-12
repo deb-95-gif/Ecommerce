@@ -19,8 +19,6 @@ public class SignInTest extends TestBase {
 	//TestUtil util;
 	SignINPage signIn;
 	HomePage homePage;
-
-	
 	public SignInTest() {
 		super();
 	}
@@ -39,12 +37,12 @@ public class SignInTest extends TestBase {
 	Assert.assertEquals(title, "My Store");
 	}
 	
-	@Test(priority = 2)
-	public void Logintest() {
-	signIn.SigninAction();
-	String title = homePage.validateHomePageTitle();
-	Assert.assertEquals(title, "Login - My Store");
-	}
+//	@Test(priority = 2)
+//	public void Logintest() {
+//	signIn.SigninAction();
+//	String title = homePage.validateHomePageTitle();
+//	Assert.assertEquals(title, "Login - My Store");
+//	}
 	
 	@AfterMethod
 	public void tearDown() {

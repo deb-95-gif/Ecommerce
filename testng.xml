@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite"  thread-count="2" parallel="tests">
-   <test name = "ChromeTest">
-   <parameter name = "browser" value = "Chrome"/>
-    <classes>
-      <class name="com.qa.ecommerce.tests.eveningDressPageTest">
-      </class>
-    </classes>
-  </test> <!-- Test -->
-   <test name = "fireFoxTest">
-   <parameter name = "browser" value = "firefox"/>
-    <classes>
-      <class name="com.qa.ecommerce.tests.eveningDressPageTest">
-    </class>
-    </classes>
-  </test>
-</suite> <!-- Suite -->
+<suite name="ECommerce Application Test Suite">
+<listeners>
+<listener class-name="com.qa.ecommerce.ExtentReportListener.ExtentReporterNG"></listener>
+</listeners>
+
+<test name = "Ecommerce Tests">
+	<classes>
+	<class name = "com.qa.ecommerce.tests.SignInTest"></class>
+	</classes>
+
+
+</test>
+</suite>
